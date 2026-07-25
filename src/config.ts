@@ -272,6 +272,43 @@ I work with experimentation and analytics instrumentation to validate feature im
 - Favor iterative delivery over big-bang releases.
 - Protect user experience in every change.`,
     },
+    {
+      id: "fullstack-product-engineering",
+      title: "Full-Stack Product Engineering",
+      subtitle:
+        "Building end-to-end product systems with backend automation, data pipelines, and cloud-first delivery.",
+      slug: "fullstack-product-engineering",
+      markdownContent: `## Overview
+
+This page summarizes my full-stack product engineering work across backend services, cloud infrastructure, and data-driven automation.
+
+## Core Technologies
+
+- AWS for cloud infrastructure, scalable service deployment, and environment operations.
+- Python for APIs, microservices, data workflows, and automation tooling.
+- JavaScript for frontend and internal product tooling.
+- Scraping and crawling pipelines for structured data extraction and processing.
+- Neural network experimentation for applied machine-learning use cases.
+
+## Engineering Patterns I Use
+
+- Service-oriented architecture with clear domain boundaries.
+- Containerized workflows for reproducible development and deployment.
+- Data processing pipelines that prioritize reliability and observability.
+- Iterative product delivery with measurable outcomes and quick feedback loops.
+
+## Product Impact
+
+I focus on shipping systems that connect product needs with technical execution: from data ingestion and processing to API exposure and user-facing functionality.
+
+## Tooling and Stack Notes
+
+- Cloud: AWS
+- Backend: Python
+- Frontend and scripting: JavaScript
+- Data extraction: scraping and crawling frameworks
+- ML exploration: neural networks for problem-specific models`,
+    },
   ] as EngineeringPage[],
 
   // ─── Experience ────────────────────────────────────────────────────────────
