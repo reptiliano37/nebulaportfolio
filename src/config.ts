@@ -120,18 +120,18 @@ export const siteConfig = {
     sourceCodeLabel: "Source Code",
     items: [
       {
+        name: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+        description:
+          "Diseno e infraestructura en produccion de un sistema de automatizacion con n8n sobre VPS/Docker para la gestion de citas, avisos de WhatsApp y entrega de planes nutricionales.",
+        pageSlug: "n8n-nutricionista-automation",
+        skills: ["n8n", "TypeScript", "Docker", "Webhooks", "REST APIs", "WhatsApp API", "VPS"],
+      },
+      {
         name: "Freetoeat",
         description:
           "iOS app for nutritionists to manage client plans, track progress, and improve adherence through a clean and data-driven mobile experience.",
         pageSlug: "freetoeat",
         skills: ["Swift", "SwiftUI", "UIKit", "REST APIs"],
-      },
-      {
-        name: "PaddleApp",
-        description:
-          "App for padel clubs to manage court reservations and training sessions, including winner tracking, unforced-error logging, and live score counting.",
-        pageSlug: "paddleapp",
-        skills: ["TypeScript", "JavaScript"],
       },
       {
         name: "Electoral Promises",
@@ -141,11 +141,11 @@ export const siteConfig = {
         skills: ["TypeScript", "Next.js", "Data Visualization"],
       },
       {
-        name: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+        name: "PaddleApp",
         description:
-          "Diseno e infraestructura en produccion de un sistema de automatizacion con n8n sobre VPS/Docker para la gestion de citas, avisos de WhatsApp y entrega de planes nutricionales.",
-        pageSlug: "n8n-nutricionista-automation",
-        skills: ["n8n", "TypeScript", "Docker", "Webhooks", "REST APIs", "WhatsApp API", "VPS"],
+          "App for padel clubs to manage court reservations and training sessions, including winner tracking, unforced-error logging, and live score counting.",
+        pageSlug: "paddleapp",
+        skills: ["TypeScript", "JavaScript"],
       },
     ] as Project[],
   },
