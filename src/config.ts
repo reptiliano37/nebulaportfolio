@@ -104,7 +104,7 @@ const en = {
       resume: "Download Resume",
       resumeLoading: "Generating…",
     },
-    resumeUrl: "",
+    resumeUrl: "/CV_AraraMiguel.pdf",
   },
 
   // ─── About ─────────────────────────────────────────────────────────────────
