@@ -58,7 +58,7 @@ export const siteConfig = {
   navigation: {
     home: "Home",
     about: "About",
-    projects: "Projects",
+    projects: "Personal Projects",
     experience: "Experience",
     education: "Education",
     pages: "Pages",
@@ -94,7 +94,7 @@ export const siteConfig = {
       resume: "Download Resume",
       resumeLoading: "Generating…",
     },
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "",
   },
 
   // ─── About ─────────────────────────────────────────────────────────────────
@@ -102,12 +102,12 @@ export const siteConfig = {
   about: {
     sectionTitle: "About Me",
     skillsLabel: "Skills",
-    body: "Mobile Engineer with 8 years of experience specializing in iOS development, SwiftUI architecture, and scalable product features for high-traffic production apps. Strong background in UIKit, progressive SwiftUI migrations, experimentation frameworks, analytics instrumentation, and dynamic configuration systems. Experienced in shipping data-driven features, improving app performance and user experience, and maintaining high code quality through modern architecture and testing practices.",
+    body: "Mobile Engineer specialized in iOS development and SwiftUI architecture, with experience building scalable features for high-traffic e-commerce apps serving millions of users across 30+ markets. Strong background in feature flag systems, A/B experimentation, advanced analytics instrumentation, and dynamic configuration in large-scale multi-market environments. Previously worked as a Full Stack Developer building REST APIs, Python microservices, and automation systems, bringing strong end-to-end product engineering capabilities.",
     skills: [
-      "Swift", "SwiftUI", "UIKit", "Xcode",
-      "iOS Architecture", "REST APIs", "GrowthBook", "Analytics Instrumentation",
-      "Git", "GitHub", "Fastlane", "CI/CD",
-      "Python", "TypeScript", "Docker", "AWS",
+      "Swift", "SwiftUI", "UIKit", "Swift Concurrency",
+      "iOS Architecture", "Feature Flags", "A/B Testing", "Analytics Instrumentation",
+      "REST APIs", "Python", "TypeScript", "JavaScript",
+      "Git", "GitHub", "Fastlane", "CI/CD", "AWS",
     ],
   },
 
@@ -115,7 +115,7 @@ export const siteConfig = {
   // Removing all items from items[] hides the Projects section.
 
   projects: {
-    sectionTitle: "Projects",
+    sectionTitle: "Personal Projects",
     deepDiveLabel: "Read page",
     sourceCodeLabel: "Source Code",
     items: [
@@ -132,6 +132,13 @@ export const siteConfig = {
           "App for padel clubs to manage court reservations and training sessions, including winner tracking, unforced-error logging, and live score counting.",
         pageSlug: "paddleapp",
         skills: ["TypeScript", "JavaScript"],
+      },
+      {
+        name: "Electoral Promises",
+        description:
+          "Platform to track campaign promises, monitor delivery status, and compare political commitments against measurable outcomes, designed to scale to Android and iOS with a Cloudflare backend.",
+        pageSlug: "electoral-promises",
+        skills: ["TypeScript", "Next.js", "Data Visualization"],
       },
     ] as Project[],
   },
@@ -150,6 +157,39 @@ export const siteConfig = {
   // Each item maps to a route at /pages/[slug].
 
   pages: [
+    {
+      id: "electoral-promises",
+      title: "Electoral Promises",
+      subtitle:
+        "Tracking political commitments and evaluating promise fulfillment with transparent public data.",
+      slug: "electoral-promises",
+      markdownContent: `## Overview
+
+Electoral Promises is a civic-tech project focused on improving transparency around campaign commitments and public accountability.
+
+## Core Features
+
+- Structured catalog of promises by candidate, party, and election cycle.
+- Status tracking pipeline (pending, in progress, fulfilled, broken).
+- Public timeline of updates based on official sources and verifiable references.
+- Comparative views to analyze performance across candidates and parties.
+
+## Product Goal
+
+The goal is to help citizens quickly understand what was promised, what was delivered, and where gaps remain.
+
+## Scalability Roadmap
+
+The platform is being designed with a multi-client strategy so it can scale from web to native Android and iOS experiences without reworking the core domain model.
+
+## Backend Strategy
+
+The backend is planned on Cloudflare infrastructure, leveraging edge-first services to keep latency low, improve global availability, and support growth as usage expands.
+
+## Tech Stack
+
+Built with TypeScript and Next.js, with a strong focus on maintainability, data clarity, and responsive UX for public access.`,
+    },
     {
       id: "paddleapp",
       title: "PaddleApp",
@@ -245,11 +285,12 @@ I work with experimentation and analytics instrumentation to validate feature im
         title: "iOS Developer",
         dateRange: "2022 — Present",
         bullets: [
-          "Develop and maintain a leading iOS application within the Inditex Group ecosystem.",
-          "Drive progressive migration from UIKit to SwiftUI while preserving product stability and delivery pace.",
-          "Contribute to performance optimization and UX improvements across high-traffic app flows.",
-          "Collaborate in data-driven feature delivery with experimentation and analytics instrumentation.",
-          "Maintain high code quality standards through modern architecture patterns and testing practices.",
+          "Develop and maintain a high-traffic e-commerce iOS app serving millions of users across 30+ markets.",
+          "Architected a core commerce module with dual-backend routing, actor-based mutation queue with debounce and batch coalescing, and optimistic UI with automatic state reversion on failure.",
+          "Designed feature flag infrastructure for gradual rollouts and A/B experimentation, enabling runtime service routing without app restarts.",
+          "Led migration from legacy completion-handler APIs to Swift Concurrency (async/await), including adapter layers between Objective-C controllers and modern Swift patterns.",
+          "Implemented advanced analytics instrumentation with impression tracking, scroll visibility detection, and structured event taxonomy across multiple product surfaces.",
+          "Diagnosed and resolved a complex OAuth issue related to ephemeral browser session cookie isolation, coordinating cross-team fixes with backend teams.",
         ],
       },
       {
@@ -257,9 +298,9 @@ I work with experimentation and analytics instrumentation to validate feature im
         title: "Full Stack Developer",
         dateRange: "2020 — 2021",
         bullets: [
-          "Built and maintained microservices in Python for enterprise and public-sector initiatives.",
-          "Automated operational workflows using scraping/crawling scripts and Pandas-based data pipelines.",
-          "Developed internal and client-facing solutions with JavaScript and containerized Docker environments.",
+          "Designed and maintained Python microservices for enterprise and public-sector initiatives.",
+          "Automated operational workflows using scraping and crawling scripts, plus data processing pipelines with Pandas.",
+          "Developed internal and client-facing solutions with JavaScript and Dockerized environments.",
           "Contributed to large-scale consulting projects with cross-team coordination and delivery ownership.",
         ],
       },
@@ -268,9 +309,9 @@ I work with experimentation and analytics instrumentation to validate feature im
         title: "Full-Stack Engineer",
         dateRange: "2018 — 2020",
         bullets: [
-          "Developed full-stack features and internal tools in public-sector and big-data oriented programs.",
-          "Implemented backend services and integration layers with strong focus on reliability and maintainability.",
-          "Worked in multidisciplinary teams delivering enterprise software under consulting timelines.",
+          "Developed full-stack features and internal tools in public-sector and big-data-oriented programs.",
+          "Implemented backend services and integration layers focused on reliability and maintainability.",
+          "Worked in multidisciplinary consulting teams delivering enterprise software under strict timelines.",
         ],
       },
     ] satisfies Experience[],
