@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { siteConfig } from "@/config";
+import { useTranslation } from "@/lib/i18n";
 import { SectionLabel } from "./About";
 
 export default function Contact() {
-  const { contact, social } = siteConfig;
+  const { contact, social } = useTranslation();
   const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

@@ -1,8 +1,10 @@
-import { siteConfig } from "@/config";
+"use client";
+import type { Project } from "@/config";
+import { useTranslation } from "@/lib/i18n";
 import { SectionLabel } from "./About";
 
-function ProjectCard({ project, index }: { project: typeof siteConfig.projects.items[number]; index: number }) {
-  const { projects } = siteConfig;
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const { projects } = useTranslation();
 
   return (
     <div
@@ -72,7 +74,7 @@ function ProjectCard({ project, index }: { project: typeof siteConfig.projects.i
 
 
 export default function Projects() {
-  const { projects } = siteConfig;
+  const { projects } = useTranslation();
 
   return (
     <section id="projects" className="py-16 px-6">

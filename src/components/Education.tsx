@@ -1,8 +1,9 @@
-import { siteConfig } from "@/config";
+"use client";
+import { useTranslation } from "@/lib/i18n";
 import { SectionLabel } from "./About";
 
 export default function Education() {
-  const { education } = siteConfig;
+  const { education } = useTranslation();
 
   return (
     <section id="education" className="py-16 px-6">

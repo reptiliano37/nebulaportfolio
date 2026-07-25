@@ -1,4 +1,5 @@
-import { siteConfig } from "@/config";
+"use client";
+import { useTranslation } from "@/lib/i18n";
 import DownloadResumeButton from "@/components/DownloadResumeButton";
 
 function EmailIcon() {
@@ -29,7 +30,7 @@ function GitHubIcon() {
 }
 
 export default function Hero() {
-  const { hero, name, title, social } = siteConfig;
+  const { hero, name, title, social } = useTranslation();
 
   return (
     <section

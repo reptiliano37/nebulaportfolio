@@ -1,9 +1,9 @@
 "use client";
 
-import { siteConfig } from "@/config";
+import { useTranslation } from "@/lib/i18n";
 
 export default function DownloadResumeButton({ label }: { label: string }) {
-  const resumeUrl = siteConfig.hero.resumeUrl;
+  const resumeUrl = useTranslation().hero.resumeUrl;
 
   const handleDownload = () => {
     if (!resumeUrl) return;

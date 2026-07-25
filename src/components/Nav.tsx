@@ -1,11 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { siteConfig } from "@/config";
-
-const { navigation, projects, experience, education } = siteConfig;
-const hasProjects = projects.items.length > 0;
-const hasExperience = experience.items.length > 0;
-const hasEducation = education.items.length > 0;
+import { useLanguage, useTranslation } from "@/lib/i18n";
 
 function SunIcon() {
   return (
@@ -51,7 +46,25 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
+function GlobeIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3.6 9h16.8M3.6 15h16.8" />
+      <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+    </svg>
+  );
+}
+
 export default function Nav() {
+  const navigation = useTranslation().navigation;
+  const { projects, experience, education } = useTranslation();
+  const { locale, toggleLocale } = useLanguage();
+  const hasProjects = projects.items.length > 0;
+  const hasExperience = experience.items.length > 0;
+  const hasEducation = education.items.length > 0;
+  const nextLocaleLabel = (locale === "en" ? "es" : "en").toUpperCase();
+
   const [isDark, setIsDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -117,6 +130,16 @@ export default function Nav() {
             ))}
             <li>
               <button
+                onClick={toggleLocale}
+                aria-label={navigation.aria.toggleLanguage}
+                className="h-8 px-2.5 flex items-center gap-1.5 rounded-full text-[12px] font-semibold tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/80 dark:hover:bg-neutral-800/60 transition-all duration-200"
+              >
+                <GlobeIcon />
+                {nextLocaleLabel}
+              </button>
+            </li>
+            <li>
+              <button
                 onClick={toggleTheme}
                 aria-label={navigation.aria.toggleTheme}
                 className="w-8 h-8 flex items-center justify-center rounded-full text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/80 dark:hover:bg-neutral-800/60 transition-all duration-200"
@@ -128,6 +151,14 @@ export default function Nav() {
 
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-1.5 shrink-0">
+            <button
+              onClick={toggleLocale}
+              aria-label={navigation.aria.toggleLanguage}
+              className="h-8 px-2.5 flex items-center gap-1.5 rounded-full text-[12px] font-semibold tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/50 transition-all duration-200"
+            >
+              <GlobeIcon />
+              {nextLocaleLabel}
+            </button>
             <button
               onClick={toggleTheme}
               aria-label={navigation.aria.toggleTheme}
