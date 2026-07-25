@@ -140,6 +140,13 @@ export const siteConfig = {
         pageSlug: "electoral-promises",
         skills: ["TypeScript", "Next.js", "Data Visualization"],
       },
+      {
+        name: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+        description:
+          "Diseno e infraestructura en produccion de un sistema de automatizacion con n8n sobre VPS/Docker para la gestion de citas, avisos de WhatsApp y entrega de planes nutricionales.",
+        pageSlug: "n8n-nutricionista-automation",
+        skills: ["n8n", "TypeScript", "Docker", "Webhooks", "REST APIs", "WhatsApp API", "VPS"],
+      },
     ] as Project[],
   },
 
@@ -308,6 +315,41 @@ I focus on shipping systems that connect product needs with technical execution:
 - Frontend and scripting: JavaScript
 - Data extraction: scraping and crawling frameworks
 - ML exploration: neural networks for problem-specific models`,
+    },
+    {
+      id: "n8n-nutricionista-automation",
+      title: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+      subtitle:
+        "Automation Engineer / Backend & DevOps",
+      slug: "n8n-nutricionista-automation",
+      markdownContent: `## Desafio
+
+El cliente perdia mas de 10 horas semanales en tareas administrativas manuales: confirmacion de citas, envio de recordatorios, gestion de fichas de pacientes y entrega de dietas en PDF.
+
+## Solucion Tecnica
+
+1. Infraestructura & DevOps: Instancia de n8n Self-Hosted desplegada en VPS con Docker Compose y proxy inverso con SSL/HTTPS, garantizando alta disponibilidad y privacidad de datos de salud (RGPD).
+2. Flujos en Produccion (Webhooks & APIs):
+   - Integracion via Webhooks de produccion con herramientas de reserva y formularios.
+   - Automatizacion de mensajes de confirmacion y recordatorio via WhatsApp/Telegram.
+   - Envio automatizado de pautas nutricionales personalizadas tras las consultas.
+3. Resiliencia: Configuracion de "Error Workflows" en n8n para captura de excepciones y alertas inmediatas ante fallos de API.
+
+## Impacto
+
+- Reduccion de +10 horas/semana en trabajo manual.
+- Disminucion del 35% en cancelaciones y ausencias a consulta.
+- Disponibilidad 24/7 de la arquitectura de automatizacion.
+
+## Tecnologias
+
+- n8n
+- TypeScript
+- Docker
+- Webhooks
+- REST APIs
+- WhatsApp API
+- VPS`,
     },
   ] as EngineeringPage[],
 
