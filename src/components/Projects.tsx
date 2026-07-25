@@ -82,7 +82,7 @@ export default function Projects() {
         <SectionLabel>{projects.sectionTitle}</SectionLabel>
         <div className="grid grid-cols-1 gap-4">
           {projects.items.map((project, i) => (
-            <ProjectCard key={project.name} project={project} index={i} />
+            <ProjectCard key={project.pageSlug ?? i} project={project} index={i} />
           ))}
         </div>
       </div>
