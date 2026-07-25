@@ -120,9 +120,9 @@ export const siteConfig = {
     sourceCodeLabel: "Source Code",
     items: [
       {
-        name: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+        name: "n8n Patient Management Automation for Nutrition Clinic",
         description:
-          "Diseno e infraestructura en produccion de un sistema de automatizacion con n8n sobre VPS/Docker para la gestion de citas, avisos de WhatsApp y entrega de planes nutricionales.",
+          "Production-grade automation system built with n8n on VPS/Docker to manage appointments, WhatsApp reminders, and nutrition plan delivery.",
         pageSlug: "n8n-nutricionista-automation",
         skills: ["n8n", "TypeScript", "Docker", "Webhooks", "REST APIs", "WhatsApp API", "VPS"],
       },
@@ -318,30 +318,30 @@ I focus on shipping systems that connect product needs with technical execution:
     },
     {
       id: "n8n-nutricionista-automation",
-      title: "Sistema de Automatizacion de Gestion de Pacientes para Clinica Nutricional",
+      title: "n8n Patient Management Automation for Nutrition Clinic",
       subtitle:
-        "Automation Engineer / Backend & DevOps",
+        "Automation Engineering with Backend and DevOps ownership.",
       slug: "n8n-nutricionista-automation",
-      markdownContent: `## Desafio
+      markdownContent: `## Challenge
 
-El cliente perdia mas de 10 horas semanales en tareas administrativas manuales: confirmacion de citas, envio de recordatorios, gestion de fichas de pacientes y entrega de dietas en PDF.
+The client was losing more than 10 hours per week on manual administrative tasks: appointment confirmations, reminder messages, patient record handling, and nutrition plan PDF delivery.
 
-## Solucion Tecnica
+## Technical Solution
 
-1. Infraestructura & DevOps: Instancia de n8n Self-Hosted desplegada en VPS con Docker Compose y proxy inverso con SSL/HTTPS, garantizando alta disponibilidad y privacidad de datos de salud (RGPD).
-2. Flujos en Produccion (Webhooks & APIs):
-   - Integracion via Webhooks de produccion con herramientas de reserva y formularios.
-   - Automatizacion de mensajes de confirmacion y recordatorio via WhatsApp/Telegram.
-   - Envio automatizado de pautas nutricionales personalizadas tras las consultas.
-3. Resiliencia: Configuracion de "Error Workflows" en n8n para captura de excepciones y alertas inmediatas ante fallos de API.
+1. Infrastructure and DevOps: Self-hosted n8n deployed on a VPS with Docker Compose and an SSL/HTTPS reverse proxy, ensuring high availability and health data privacy compliance.
+2. Production Workflows (Webhooks and APIs):
+   - Production webhook integrations with booking tools and intake forms.
+   - Automated confirmation and reminder messaging through WhatsApp and Telegram.
+   - Automated delivery of personalized nutrition guidelines after consultations.
+3. Resilience: Dedicated error workflows in n8n to capture exceptions and trigger immediate alerts on API failures.
 
-## Impacto
+## Impact
 
-- Reduccion de +10 horas/semana en trabajo manual.
-- Disminucion del 35% en cancelaciones y ausencias a consulta.
-- Disponibilidad 24/7 de la arquitectura de automatizacion.
+- Reduced manual workload by more than 10 hours per week.
+- Decreased cancellations and no-shows by 35%.
+- Achieved 24/7 availability for the automation architecture.
 
-## Tecnologias
+## Technologies
 
 - n8n
 - TypeScript
