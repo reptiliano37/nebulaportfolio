@@ -287,7 +287,46 @@ I work with experimentation and analytics instrumentation to validate feature im
 - Build for maintainability first.
 - Keep architecture simple and explicit.
 - Favor iterative delivery over big-bang releases.
-- Protect user experience in every change.`,
+- Protect user experience in every change.
+
+---
+
+## Contribution Summary — iOS Development (e-Commerce App, Inditex)
+
+During this period I worked on a large-scale e-commerce app (hybrid UIKit/SwiftUI architecture, MVVM, dependency injection, and coordinator-based navigation), contributing across multiple functional and cross-cutting areas.
+
+### Analytics and Event Tracking
+
+- Design and implementation of analytics event tagging (page hits, clicks, and add-to-cart) across **product detail page (PDP)**, **checkout**, and **home** flows.
+- Modeled the **navigation origin/context logic** (grid, search, shuffle, deeplink) so each event reports the correct source, resolving ambiguous cases with clean state propagation and well-typed optional values.
+- Worked with an analytics SDK distributed via **Swift Package Manager**, including the distinction between remote dependencies and local legacy code.
+
+### Concurrency and Stability (Crash Resolution)
+
+- Diagnosed and fixed a **concurrency crash** in a non-thread-safe remote configuration SDK. Implemented an **access serializer** (lock + FIFO chaining of async tasks) to eliminate race conditions between concurrent mutations.
+- Reinforced the solution through **shared dependency injection** and preserved behavior after merge conflict resolution.
+- Demonstrates mastery of \`async/await\`, state isolation, \`NSLock\`, and reasoning about *data races*.
+
+### New Product Features
+
+- **Virtual Gift Card (PDP in SwiftUI):** purchase forms, validation, add-to-cart flow, and image design selector, with feature flag activation support.
+- **Wishlist 2.0:** reactive grid refresh on return from PDP using **Combine** (\`PassthroughSubject\`/publishers), and a success modal with safe navigation (strong context capture before \`dismiss\`).
+- **Shuffle:** add-to-cart flow integration with its specific origin event tagging.
+
+### UI / Auto Layout Debugging
+
+- Resolved subtle **Auto Layout and \`hitTest\` bugs** (views visible but non-interactive due to superview bounds), fixing constraints and view hierarchies to ensure tappability and correct layout.
+- Localization (l10n): correct substitution of placeholders in translated strings across multiple languages.
+
+### Processes, Tooling and Quality
+
+- **Release management** with Fastlane (beta/RC branches, version bumping) and resolution of environment issues (git, disk space, credentials).
+- Critical architecture review: evaluation of **DI vs. singletons**, actor isolation, strong typing for configuration access, and expanding contract tests for race scenarios.
+- Configuration of **agent/AI customization** in the repository (instructions, skills, and prompts) to standardize team conventions.
+
+### Demonstrated Competencies
+
+Modern Swift (\`async/await\`, Combine), UIKit + SwiftUI, MVVM and coordinators, dependency injection, concurrency and thread-safety, SDK integration via SPM, event analytics, feature flags/experimentation, advanced Auto Layout, crash debugging, localization, CI/CD with Fastlane, and testing best practices.`,
     },
     {
       id: "fullstack-product-engineering",
@@ -695,7 +734,46 @@ Trabajo con experimentación e instrumentación de analítica para validar el im
 - Construir pensando primero en la mantenibilidad.
 - Mantener la arquitectura simple y explícita.
 - Favorecer la entrega iterativa frente a los lanzamientos de gran impacto.
-- Proteger la experiencia de usuario en cada cambio.`,
+- Proteger la experiencia de usuario en cada cambio.
+
+---
+
+## Resumen de contribuciones — Desarrollo iOS (app de e-Commerce, Inditex)
+
+Durante este periodo he trabajado sobre una app de comercio electrónico de gran escala (arquitectura híbrida UIKit/SwiftUI, MVVM, inyección de dependencias y navegación por coordinadores), contribuyendo en varias áreas funcionales y transversales.
+
+### Analítica y tracking de eventos
+
+- Diseño e implementación del etiquetado de eventos de analítica (page hits, clicks y add-to-cart) en flujos de **ficha de producto (PDP)**, **checkout** y **home**.
+- Modelado de la lógica de **origen/contexto de navegación** (parrilla, buscador, shuffle, deeplink) para que cada evento reporte el origen correcto, resolviendo casos ambiguos con propagación de estado limpia y valores opcionales bien tipados.
+- Trabajo con un SDK de analítica distribuido vía **Swift Package Manager**, incluyendo la distinción entre dependencias remotas y código legado local.
+
+### Concurrencia y estabilidad (resolución de crashes)
+
+- Diagnóstico y corrección de un **crash de concurrencia** en un SDK de configuración remota no thread-safe. Implementé un **serializador de acceso** (bloqueo + encadenado FIFO de tareas asíncronas) para eliminar condiciones de carrera entre mutaciones concurrentes.
+- Refuerzo de la solución mediante **inyección de dependencias** compartida y preservación del comportamiento tras resolución de conflictos de merge.
+- Demuestra dominio de \`async/await\`, aislamiento de estado, \`NSLock\` y razonamiento sobre *data races*.
+
+### Nuevas funcionalidades de producto
+
+- **Gift Card virtual (PDP en SwiftUI):** formularios de compra, validación, flujo de add-to-cart y selector de diseño de imagen, con posibilidad de activación mediante *feature flags*.
+- **Wishlist 2.0:** refresco reactivo del grid al volver de la PDP usando **Combine** (\`PassthroughSubject\`/publishers), y un modal de éxito con navegación segura (captura fuerte de contexto antes del \`dismiss\`).
+- **Shuffle:** integración del flujo de add-to-cart con su etiquetado de origen específico.
+
+### Depuración de UI/Auto Layout
+
+- Resolución de bugs sutiles de **Auto Layout y \`hitTest\`** (vistas visibles pero no interactivas por bounds del superview), corrigiendo *constraints* y jerarquías para garantizar tappability y layout correcto.
+- Localización (l10n): sustitución correcta de placeholders en textos traducidos en múltiples idiomas.
+
+### Procesos, tooling y calidad
+
+- Gestión de **releases** con Fastlane (ramas beta/RC, *bump* de versiones) y resolución de incidencias de entorno (git, espacio, credenciales).
+- Revisión crítica de arquitectura: valoración de **DI frente a singletons**, aislamiento por actores, tipado fuerte de accesos a configuración y ampliación de *tests* de contrato para escenarios de carrera.
+- Configuración de **customización de agentes/IA** del repositorio (instrucciones, skills y prompts) para estandarizar convenciones del equipo.
+
+### Competencias demostradas
+
+Swift moderno (\`async/await\`, Combine), UIKit + SwiftUI, MVVM y coordinadores, inyección de dependencias, concurrencia y *thread-safety*, integración de SDKs vía SPM, analítica de eventos, *feature flags*/experimentación, Auto Layout avanzado, depuración de crashes, localización, CI/CD con Fastlane y buenas prácticas de testing.`,
     },
     {
       id: "fullstack-product-engineering",
